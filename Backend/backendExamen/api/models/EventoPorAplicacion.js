@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
 
     tabla_evento_id: {
-      model: 'evento' // Modelo Papa
+      model: 'Eventos' // Modelo Papa
     },
 
     tabla_aplicacion_id: {

@@ -9,9 +9,9 @@ module.exports = {
 
   attributes: {
 
-    pesoEnGigas: {
+    pesoEnGigasAplicacion: {
       type: 'number',
-      columnName: 'peso_en_gigas',
+      columnName: 'peso_en_gigas_aplicacion',
       columnType: 'decimal(6,2)',
       required: true
     },

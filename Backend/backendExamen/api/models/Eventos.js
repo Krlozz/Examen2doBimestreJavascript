@@ -9,19 +9,27 @@ module.exports = {
 
   attributes: {
 
-    //  ╔═╗╦═╗╦╔╦╗╦╔╦╗╦╦  ╦╔═╗╔═╗
-    //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
-    //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
+    nombre: {
+      type: 'string',
+      required: true
+    },
+    fecha: {
+      type: 'string',
+      columnName: 'fecha',
+    },
+    latitud: {
+      type: 'string',
+      columnName: 'latitud',
+    },
+    longitud: {
+      type: 'string',
+      columnName: 'longitud',
+    },
 
-
-    //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
-    //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
-    //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝
-
-
-    //  ╔═╗╔═╗╔═╗╔═╗╔═╗╦╔═╗╔╦╗╦╔═╗╔╗╔╔═╗
-    //  ╠═╣╚═╗╚═╗║ ║║  ║╠═╣ ║ ║║ ║║║║╚═╗
-    //  ╩ ╩╚═╝╚═╝╚═╝╚═╝╩╩ ╩ ╩ ╩╚═╝╝╚╝╚═╝
+    tablaEventoId: {
+      collection: 'EventoPorAplicacion', // Modelo Hijo
+      via: 'tabla_evento_id' // Nombre del Campo
+    },
 
   },
 

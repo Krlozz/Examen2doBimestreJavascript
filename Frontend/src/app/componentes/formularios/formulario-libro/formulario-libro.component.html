@@ -1,0 +1,73 @@
+<form>
+    <div class="form-group">
+        <label>ICBN</label>
+        <input         
+        type="number" 
+        class="form-control"                
+        placeholder="ICBN"
+        name="icbn"
+        [(ngModel)]="libroACrear.icbn"
+        >
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label>Nombre</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Nombre Libro"
+        name="nombreLibro"
+        [(ngModel)]="libroACrear.nombreLibro"
+        >
+    </div>
+    <div class="form-group">
+        <label>Numero de Paginas</label>
+        <input 
+        type="number" 
+        class="form-control" 
+        placeholder="Numero Paginas"
+        name="numeroPaginas"
+        [(ngModel)]="libroACrear.numeroPaginas"
+        >
+    </div>
+    <div class="form-group">
+        <label>Edicion</label>
+        <input 
+        type="number"         
+        class="form-control" 
+        placeholder="Edicion"
+        name="edicion"
+        [(ngModel)]="libroACrear.edicion"
+        >
+    </div>        
+    <div class="form-group">
+        <label>Fecha Publicacion</label>
+        <input 
+        type="date" 
+        class="form-control" 
+        placeholder="Fecha Publicacion"
+        name="fechaPublicacion"
+        [(ngModel)]="libroACrear.fechaPublicacion"
+        >
+    </div>
+    <div class="form-group">
+        <label>Nombre Editorial</label>
+        <input 
+        type="text" 
+        class="form-control" 
+        placeholder="Nombre editorial"
+        name="nombreEditorial"
+        [(ngModel)]="libroACrear.nombreEditorial"
+        >
+    </div>        
+    <div>
+        <label>
+          Seleccione Autor
+        </label>
+      <select  class="custom-select"  name="idAutor" [(ngModel)]="libroACrear.idAutor">
+        <option>
+          alo
+        </option>
+      </select>
+    </div>
+</form>

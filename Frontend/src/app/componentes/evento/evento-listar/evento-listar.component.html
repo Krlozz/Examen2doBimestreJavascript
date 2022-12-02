@@ -1,0 +1,67 @@
+<p-dataView 
+#dv 
+[value]="todosEquipos" 
+[rows]="2" 
+[paginator]="true" 
+>
+    <p-header>
+        <div class="ui-helper-clearfix">
+            <div class="ui-g">
+                <div class="ui-g-12 ui-md-4">
+                    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+                </div>
+                <div class="ui-g-6 ui-md-4 filter-container">               
+                </div>
+                <div class="ui-g-6 ui-md-4" style="text-align:right">                
+                </div>
+            </div>
+        </div>
+    </p-header>    
+    <ng-template 
+    let-car 
+    pTemplate="gridItem">
+        <div style="padding:.5em" class="ui-g-12 ui-md-3">
+            <p-panel 
+            [header]="car.vinombren" 
+            [style]="{'text-align':'center'}">
+                <img src="https://api.adorable.io/avatars/100/{{car.nombre}}" width="60">
+                <div class="car-detail">{{car.nombre}} - {{car.estadio}}</div>
+                <hr class="ui-widget-content" style="border-top:0">
+                <button 
+                pButton 
+                type="button" 
+                icon="pi pi-search" 
+                (click)="selectCar($event, car)" 
+                style="margin-top:0"></button>
+            </p-panel>
+        </div>
+    </ng-template>
+</p-dataView>
+
+<p-dialog 
+header="Car Details" 
+[(visible)]="displayDialog" 
+[responsive]="true" 
+showEffect="fade" 
+[modal]="true" 
+[style]="{width: '225px'}"  
+(onAfterHide)="onDialogHide()">
+    <div 
+    class="ui-g" 
+    *ngIf="selectedCar">
+        <div class="ui-g-12" style="text-align:center">
+            <img src="https://api.adorable.io/avatars/100/{{selectedCar.nombre}}.png">
+        </div>
+        <div class="ui-g-4">Vin: </div>
+        <div class="ui-g-8">{{selectedCar.nombre}}</div>
+
+        <div class="ui-g-4">Brand: </div>
+        <div class="ui-g-8">{{selectedCar.estadio}}</div>
+
+        <div class="ui-g-4">Year: </div>
+        <div class="ui-g-8">{{selectedCar.nombre}}</div>
+
+        <div class="ui-g-4">Color: </div>
+        <div class="ui-g-8">{{selectedCar.estadio}}</div>
+    </div>
+</p-dialog>

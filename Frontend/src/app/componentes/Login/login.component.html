@@ -1,0 +1,18 @@
+<div>
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <app-formulario-login (enviarCredenciales)="credenciales($event)"></app-formulario-login>
+            <div class="row">
+                <div class="col-sm-5">
+                    <button type="submit" class="btn btn-primary" (click)="misCredenciales()">Ingresar</button>
+                </div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <button class="btn btn-outline-primary" [routerLink]="[ '/registro-usuario']">Registrar</button>
+                </div>
+            </div>
+        </div>   
+        <div class="col-sm-4"></div>
+    </div>
+</div>
